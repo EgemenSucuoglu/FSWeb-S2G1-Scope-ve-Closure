@@ -64,9 +64,15 @@ Aşağıdaki takimSkoru() fonksiyonununda aşağıdakileri yapınız:
 Not: Bu fonskiyon, aşağıdaki diğer görevler için de bir callback fonksiyonu olarak da kullanılacak
 */
 
-function takimSkoru(/*Kodunuzu buraya yazınız*/){
-    /*Kodunuzu buraya yazınız*/
+function takimSkoru(min, max){
+  let takimSkoru = 0;
+    return Math.floor(Math.random() * (max - min) + min);
 }
+
+  console.log(takimSkoru(10, 25));
+  
+  
+ 
 
 
 
@@ -86,7 +92,7 @@ Aşağıdaki macSonucu() fonksiyonununda aşağıdakileri yapınız:
 }
 */ 
 
-function macSonucu(/*Kodunuzu buraya yazınız*/){
+function macSonucu(takimSkoru, 4){
   /*Kodunuzu buraya yazınız*/
 }
 
