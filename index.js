@@ -92,10 +92,21 @@ Aşağıdaki macSonucu() fonksiyonununda aşağıdakileri yapınız:
 }
 */ 
 
-function macSonucu(takimSkoru, 4){
-  /*Kodunuzu buraya yazınız*/
-}
+function macSonucu(callBack,ceyrek){
+  let EvSahibi=0;
+  let KonukTakim=0;
+  for(let i=0 ; i<=ceyrek ; i++)
+  {
+    EvSahibi += callBack();
+    KonukTakim += callBack();
+  }
 
+  return {
+    "EvSahibi": EvSahibi,
+  "KonukTakim": KonukTakim
+  };
+}
+console.log(macSonucu(takimSkoru, 4));
 
 
 
