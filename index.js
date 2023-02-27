@@ -166,10 +166,32 @@ MAÇ UZAR ise skorTabelasi(periyotSkoru,takimSkoru,4)
 ] */
 // NOTE: Bununla ilgili bir test yoktur. Eğer logladığınız sonuçlar yukarıdakine benziyor ise tmamlandı sayabilirsiniz.
 
-function skorTabelasi(/*Kodunuzu buraya yazınız*/) {
-  /*Kodunuzu buraya yazınız*/
-}
+function skorTabelasi(periyotSkoru, takimSkoru, ceyrekSayisi) {
+  let macBilgileri = [];
+  let evSahibiTakim = 0;
+  let KonukTakim = 0;
+  for (let i=0; i<ceyrekSayisi; i++)
+  {
+      let periyotSkoru = periyotSkoruNew(takimSkoruNew);
+      evSahibiTakim += periyotSkoru.takimSkoru;
+      KonukTakim  += takimSkoru.ceyrekSayisi;
+      macBilgileri.push(`${i}. Periyott : Ev Sahibi ${periyotSkoru.evSahibiTakim} - ${i}. Periyott : Konuk Takım ${periyotSkoru.KonukTakim}} `);
+  }
+  let i=1;
+  while (evSahibiTakim === KonukTakim);
+  {
+    let periyotSkoru = periyotSkoruNew(takimSkoruNew);
+      evSahibiTakim += periyotSkoru.takimSkoru;
+      KonukTakim  += takimSkoru.ceyrekSayisi;
+      macBilgileri.push(`${i}. Uzatma : Ev Sahibi ${periyotSkoru.evSahibiTakim} - ${i}. Periyott : Konuk Takım ${periyotSkoru.KonukTakim}} `);
+      i++;
 
+  }
+  macBilgileri.push(`${i}. MacSonucu : Ev Sahibi ${evSahibiTakim} - ${i}. Periyott : Konuk Takım ${KonukTakim}`);
+  
+  return macBilgileri;
+}
+console.log(skorTabelasi(periyotSkoru, takimSkoru, 4));
 
 
 
